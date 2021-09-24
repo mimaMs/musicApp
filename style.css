@@ -1,0 +1,266 @@
+:root {
+--navBlue: #09192c; 
+--darkBlue: #0b193c;
+--pink: #f91257;
+--white: white;
+--lightGray: #f8f8f8;
+--violet: #383c6e;
+--fontFamily: 'Montserrat', sans-serif;
+--fontColor: #0b193c;
+--fontSize: 16px;
+--transition: .3s ease;
+--py: 80px 0;
+
+}
+/***************
+ basic styles
+ ***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fontSize);
+    color: var(--fontColor);
+    font-family: var(--fontFamily);
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+span {
+    color: var(--pink)!important;
+}
+.nav-link.active {
+    color: var(--pink)!important;
+}
+img {
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 4rem;
+}
+h3{
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: none;
+}
+h2{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+h5 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+button {
+    color: var(--white);
+    background: var(--pink);
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    margin-top: 20px;
+}
+button:hover {
+    background: transparent;
+    border: 2px solid var(--pink);
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/***************
+ nav
+ ***************/
+ .navbar {
+     background: var(--navBlue)!important;
+     padding: 30px;
+ }
+ .nav-link {
+     color: var(--white)!important;
+     font-size: 1.1rem;
+     margin: 0 30px;
+     transition: var(--transition);   
+ }
+ .nav-link:hover {
+       color: var(--pink);
+ }
+ .navbar-brand{
+     font-weight: 700;
+     color: var(--white);
+     font-size: 1.5rem;
+ }
+ .navbar-brand:hover {
+     color: var(--pink);
+ }
+ /***************
+ header 
+ ***************/
+ header .row {
+     background: var(--darkBlue);
+     padding: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ header.col-md-6 {
+     flex: 0 0 47%;
+ }
+  /***************
+ acces
+ ***************/
+ .acces {
+     margin: 30px 50px;
+     padding: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ .acces.col-md-6 {
+       flex:0 0 45%;
+
+ }
+.acces button:hover {
+    color: var(--fontColor);
+}
+  /***************
+ footer
+ ***************/
+ footer {
+     padding: var(--py);
+     text-align: center;
+     background: var(--darkBlue);
+ }
+footer p{
+    color: var(--white);
+    font-size: 0.8rem;
+    margin: 20px 0;
+}
+footer i{
+        color: var(--white);
+        padding: 10px 30px;
+        transition: var(--transition);
+}
+footer i:hover {
+    color: var(--pink);
+}
+
+ /***************
+ works
+ ***************/
+.works {
+   background: var(--darkBlue);
+   padding: var(--py);
+   color: var(--white);
+  
+   
+}
+.works article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.works article div {
+    flex: 0 0 30%;
+}
+.works i {
+    font-size: 3rem;
+    color: var(--pink);
+   padding-bottom: 20px;
+}
+/***************
+ artists
+ ***************/
+.artists .row img {
+    border-radius: 30px;
+}
+.artists .row h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 7px;
+}
+/***************
+ subscription
+ ***************/
+ .subscription {
+     background: var(--darkBlue);
+     color: var(--white);
+     padding: var(--py);
+    
+ }
+ .subscription h3{
+     color: var(--pink);
+ }
+
+ .subscription .col-md-6:last-child{
+     background: var(--violet);
+     border-radius: 20px;
+     text-align: center;
+     padding: 50px;
+
+ }
+   .col-md-6 ul li::before {
+     font-family: "Font Awesome 5 Free";
+     content: "\f058";
+     color: var(--pink);
+     font-weight: 400;
+     margin-right: 10px;
+ }
+ .col-md-6 ul li {
+     margin-bottom: 20px;
+     text-align: left;
+     margin-left: 140px;
+     
+ }
+  .concept img{
+     border-radius: 90%;
+     margin: 0 5px;    
+ }
+  .concept h4{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 9px;
+ }
+/***************
+ responsive
+ ***************/
+
+ @media(max-width:767px) {
+        .acces {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .acces.col-md-6 {
+            flex: 0 0 100%;
+           
+        }
+        .subscription .col-md-6:last-child{
+            margin: 15px ;
+        }
+        .col-md-6 ul li{
+            margin-left: -10px;
+        }
+
+ }
+ @media(max-width:1024px) {
+    .works article div{
+    flex: 0 0 100%;
+    margin-top: 20px;
+     }
+ }
